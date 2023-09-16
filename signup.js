@@ -5,10 +5,10 @@ const confirmPassword = document.getElementById("confirmpassword");
 
 const signupHandler = async (e) => {
   e.preventDefault();
-  
-  if(password.value !== confirmPassword.value){
-    alert('confirm password is different');
-    return
+
+  if (password.value !== confirmPassword.value) {
+    alert("confirm password is different");
+    return;
   }
   const signupDetails = {
     email: email.value,

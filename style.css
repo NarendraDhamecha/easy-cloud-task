@@ -5,3 +5,8 @@ a {
 a:hover {
   color: lightblue;
 }
+
+#logout {
+  margin-left: 93%;
+  margin-top: 12px;
+}

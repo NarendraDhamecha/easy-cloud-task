@@ -96,6 +96,7 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const users = JSON.parse(localStorage.getItem("users"));
 const pagination = document.getElementById("pagination");
+const logoutBtn = document.getElementById("logout");
 
 if (users) {
   DUMMY = [...users];
@@ -117,6 +118,10 @@ nextBtn.addEventListener("click", () => {
   showUsers(start, end);
   prevBtn.className = "btn btn-primary btn-sm";
   nextBtn.className = "btn btn-primary";
+});
+
+logoutBtn.addEventListener("click", () => {
+  location.replace("http://127.0.0.1:5500/login.html");
 });
 
 const deleteUser = (id) => {
@@ -145,8 +150,8 @@ function showUsers(start, end) {
   if (totalPages < 2) {
     pagination.removeChild(nextBtn);
   }
-  if(totalPages < 1){
-    pagination.innerHTML = '<h2 class="m-5">No users</h2>'
+  if (totalPages < 1) {
+    pagination.innerHTML = '<h2 class="m-5">No users</h2>';
   }
 
   for (let i = 0; i < users.length; i++) {

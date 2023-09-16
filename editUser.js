@@ -15,7 +15,6 @@ const index = users.findIndex((user) => {
   return user.UserId == id;
 });
 
-
 fname.value = users[index].FN;
 email.value = users[index].Email;
 phone.value = users[index].Phone;
